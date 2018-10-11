@@ -142,7 +142,7 @@ fi
 
 if [ "$current_ip" = "" ]; then
 	# Retrieve current public IP address
-	current_ip=`curl --silent https://ydns.io/api/v1/ip`
+	current_ip=`wget http://ipinfo.io/ip -qO -`
 
     if [ "$current_ip" = "" ]; then
         write_msg "Error: Unable to retrieve current public IP address." 2
